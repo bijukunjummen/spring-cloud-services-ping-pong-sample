@@ -1,0 +1,14 @@
+---
+applications:
+  - name: sample-cloud-services-ping
+    path: target/sample-cloud-services-ping-1.0.0-SNAPSHOT.jar
+    memory: 512M
+    env:
+      JAVA_OPTS: -Djava.security.egd=file:/dev/./urandom
+      SPRING_PROFILES_ACTIVE: cloud
+    services:
+      - bk-config-server
+      - bk-registry
+      - bk-circuit-breaker
+
+buildpack: https://github.com/cloudfoundry/java-buildpack.git

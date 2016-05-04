@@ -1,0 +1,11 @@
+---
+server:
+  port: 8082
+
+
+reply:
+  message: Pong local
+
+security:
+  basic:
+    enabled: false

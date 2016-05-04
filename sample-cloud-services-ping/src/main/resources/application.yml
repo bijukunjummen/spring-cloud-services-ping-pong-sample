@@ -1,0 +1,25 @@
+---
+server:
+  port: 8080
+
+samplepong:
+  ribbon:
+    DeploymentContextBasedVipAddresses: sample-cloud-services-pong
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+    IsSecure: false
+
+samplepongdirect:
+  ribbon:
+    DeploymentContextBasedVipAddresses: sample-cloud-services-pong
+    listOfServers: localhost:8082
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+    IsSecure: false
+
+another:
+  key: anotherkeyvalue
+
+security:
+  basic:
+    enabled: false

@@ -6,9 +6,9 @@ applications:
     env:
       JAVA_OPTS: -Djava.security.egd=file:/dev/./urandom
       SPRING_PROFILES_ACTIVE: cloud
+      CF_TARGET: https://api.cfpoc2.internal.t-mobile.com
     services:
-      - bk-config-server
-      - bk-registry
-      - bk-circuit-breaker
+      - RspCloudHystrixDashboard
+      - RspServiceRegistry
 
 buildpack: https://github.com/cloudfoundry/java-buildpack.git

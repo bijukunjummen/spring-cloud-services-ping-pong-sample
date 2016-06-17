@@ -17,9 +17,9 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableFeignClients
 @EnableHystrix
-@RibbonClients({
-        @RibbonClient(name = "samplepongdirect", configuration = PongDirectCallRibbonConfiguration.class),
-})
+//@RibbonClients({
+//        @RibbonClient(name = "samplepongdirect", configuration = PongDirectCallRibbonConfiguration.class),
+//})
 public class PingApplication {
 
     public static void main(String[] args) {

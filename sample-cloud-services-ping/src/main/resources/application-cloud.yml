@@ -7,15 +7,8 @@ samplepong:
     DeploymentContextBasedVipAddresses: sample-cloud-services-pong
     ReadTimeout: 5000
     MaxAutoRetries: 2
-    IsSecure: false
+    IsSecure: true
 
-samplepongdirect:
-  ribbon:
-    DeploymentContextBasedVipAddresses: sample-cloud-services-pong
-    listOfServers: localhost:8082
-    ReadTimeout: 5000
-    MaxAutoRetries: 2
-    IsSecure: false
 
 another:
   key: anotherkeyvalue
@@ -29,8 +22,3 @@ hystrix:
     pongClient:
       circuitBreaker:
         sleepWindowInMilliseconds: 5000
-
-
-logging:
-  level:
-    root: INFO

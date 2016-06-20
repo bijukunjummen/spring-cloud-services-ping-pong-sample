@@ -14,14 +14,12 @@
         <module>sample-cloud-services-ping</module>
         <module>sample-cloud-services-pong</module>
     </modules>
-
     <parent>
-        <groupId>io.pivotal.spring.cloud</groupId>
-        <artifactId>spring-cloud-services-starter-parent</artifactId>
-        <version>1.0.2.RELEASE</version>
-        <relativePath/>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.2.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -54,6 +52,27 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.pivotal.spring.cloud</groupId>
+                <!--<artifactId>spring-cloud-services-dependencies</artifactId>-->
+                <artifactId>spring-cloud-services-starter-parent</artifactId>
+                <version>1.0.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <!--<artifactId>spring-cloud-dependencies</artifactId>-->
+                <artifactId>spring-cloud-starter-parent</artifactId>
+                <version>Angel.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

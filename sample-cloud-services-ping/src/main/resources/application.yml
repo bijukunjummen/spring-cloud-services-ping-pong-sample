@@ -34,3 +34,15 @@ hystrix:
 logging:
   level:
     root: INFO
+
+enpoints:
+  shutdown:
+    sensitive: false
+  autoconfig:
+    sensitive: false
+  info:
+    sensitive: false
+  health:
+    sensitive: false
+  env:
+    sensitive: false

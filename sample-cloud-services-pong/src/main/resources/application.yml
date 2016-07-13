@@ -9,3 +9,15 @@ reply:
 security:
   basic:
     enabled: false
+
+enpoints:
+  shutdown:
+    sensitive: false
+  autoconfig:
+    sensitive: false
+  info:
+    sensitive: false
+  health:
+    sensitive: false
+  env:
+    sensitive: false

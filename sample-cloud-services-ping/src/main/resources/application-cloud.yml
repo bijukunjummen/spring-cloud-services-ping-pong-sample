@@ -22,3 +22,15 @@ hystrix:
     pongClient:
       circuitBreaker:
         sleepWindowInMilliseconds: 5000
+
+enpoints:
+  shutdown:
+    sensitive: false
+  autoconfig:
+    sensitive: false
+  info:
+    sensitive: false
+  health:
+    sensitive: false
+  env:
+    sensitive: false

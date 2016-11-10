@@ -23,7 +23,7 @@ public class RibbonEurekaPongClient implements PongClient {
     @Override
     public MessageAcknowledgement sendMessage(Message message) {
         HttpEntity<Message> requestEntity = new HttpEntity<>(message);
-        ResponseEntity<MessageAcknowledgement> response =  this.restTemplate.exchange("https://samplepong/message", HttpMethod.POST, requestEntity, MessageAcknowledgement.class, Maps.newHashMap());
+        ResponseEntity<MessageAcknowledgement> response =  this.restTemplate.exchange("http://samplepong/message", HttpMethod.POST, requestEntity, MessageAcknowledgement.class, Maps.newHashMap());
         return response.getBody();
     }
 

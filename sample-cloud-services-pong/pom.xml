@@ -45,4 +45,5 @@
             <artifactId>spring-messaging</artifactId>
         </dependency>
     </dependencies>
+    
 </project>

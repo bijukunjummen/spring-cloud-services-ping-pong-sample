@@ -7,7 +7,7 @@ samplepong:
     DeploymentContextBasedVipAddresses: sample-cloud-services-pong
     ReadTimeout: 5000
     MaxAutoRetries: 2
-    IsSecure: false
+    IsSecure: true
 
 
 another:

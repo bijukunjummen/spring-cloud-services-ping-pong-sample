@@ -2,12 +2,11 @@
 applications:
   - name: sample-cloud-services-ping
     path: target/sample-cloud-services-ping-1.0.0-SNAPSHOT.jar
-    memory: 512M
+    memory: 2G
     env:
       JAVA_OPTS: -Djava.security.egd=file:/dev/./urandom
       SPRING_PROFILES_ACTIVE: cloud
-      CF_TARGET: https://api.**
-
+      TRUST_CERTS: https://api.run.pcfbeta.io
     services:
-      - rspregistry
-buildpack: https://github.com/cloudfoundry/java-buildpack.git
+      - pez-sample-registry
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git
